@@ -1,0 +1,22 @@
+{
+  "name": "sinon-codemod",
+  "version": "1.0.0",
+  "description": "Migrate tests from sinon v1 to sinon v2",
+  "main": "index.js",
+  "author": "plasticut@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "jscodeshift": "^0.3.30"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "mocha": "^3.4.2",
+    "nyc": "^10.3.2"
+  },
+  "scripts": {
+    "test": "f() { EXIT=0; npm run lint || EXIT=$?; nyc mocha $@ || EXIT=$?; exit $EXIT; }; f",
+    "lint": "eslint ."
+  }
+}
